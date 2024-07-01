@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NavPage = (props) => {
+    const [chevron, setChevron] = useState(false);
+    const [chevronTwo, setChevronTwo] = useState(false);
 
     return (
         <div className="container-container">
@@ -12,11 +14,57 @@ const NavPage = (props) => {
                 </div>
             </div>
             <div className="navpage-container">
-                <div className="navpage-text"> Services <div className="bar"></div> </div>
-                <div className="navpage-text"> New Patients <div className="bar"></div> </div>
-                <div className="navpage-text"> Insurance <div className="bar"></div> </div>
-                <div className="navpage-text"> About <div className="bar"></div> </div>
-                <div className="navpage-text"> Locations <div className="bar"></div> </div>
+                <div className="navpage-text" 
+                    onMouseEnter={() => 
+                        {
+                            setChevron(true);
+                        }}
+                        
+                        onMouseLeave={() => {
+                            setChevron(false);
+                        }}> 
+                    Services 
+                    <div className={ chevron ? "chevron-new" : "chevron"}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
+                    <div className={ chevron ? "dropdown" : "dropdown-no"}>
+                    { chevron ? 
+                    <>
+                        <div className="drop-text">Psychodynamic Psychotherapy</div> 
+                        <div className="drop-text">Interpersonal Therapy</div>
+                    </> : <></>}
+                    </div>
+                </div>
+                <div className="navpage-text" 
+                    onMouseEnter={() => 
+                        {
+                            setChevronTwo(true);
+                        }}
+                        
+                        onMouseLeave={() => {
+                            setChevronTwo(false);
+                        }}> 
+                    New Patients 
+                    
+                    <div className={ chevronTwo ? "chevron-new" : "chevron"}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </div>
+                    <div className={ chevronTwo ? "dropdown-special" : "dropdown-no-special"}>
+                    { chevronTwo ? 
+                    <>
+                        <div className="drop-text">Patient Intake Forms</div> 
+                        <div className="drop-text">Schedule Consultation</div>
+                        <div className="drop-text">Contact Dr. Aspenleiter</div>
+                    </> : <></>}
+                    </div>
+                </div>
+                <div className="navpage-text"> Insurance </div>
+                <div className="navpage-text"> About </div>
+                <div className="navpage-text"> Locations </div>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const Home = () => {
             widthTwo ?
             <>
                 <div className="landing-container-new">
-                    <img alt="Landing" src="/static/media/iphone.jpg" className="landing"></img>
+                    <img alt="Landing" src="/static/media/iphoneSmall.jpg" className="landing"></img>
                 </div>
                 <div className="info-new">
                         <div className="landing-title-new-2">
