@@ -18,6 +18,9 @@ const Home = () => {
                         <div className="landing-button">
                             Get Started
                         </div>
+                        <div className="spacer">
+
+                        </div>
                     </div>
                 </div>
             </div>
