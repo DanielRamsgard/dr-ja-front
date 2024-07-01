@@ -47,7 +47,7 @@ const Nav = () => {
                                 <div className={ chevron ? "dropdown" : "dropdown-no"}>
                                 { chevron ? 
                                 <>
-                                    <div className="drop-text">Cognitive Behavioral Therapy</div> 
+                                    <div className="drop-text">Psychodynamic Psychotherapy</div> 
                                     <div className="drop-text">Interpersonal Therapy</div>
                                 </> : <></>}
                                 </div>
