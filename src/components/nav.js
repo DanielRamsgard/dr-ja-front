@@ -47,8 +47,8 @@ const Nav = () => {
                                 <div className={ chevron ? "dropdown" : "dropdown-no"}>
                                 { chevron ? 
                                 <>
-                                <div className="drop-text">Cognitive Behavioral Therapy</div> 
-                                <div className="drop-text">Interpersonal Therapy</div>
+                                    <div className="drop-text">Cognitive Behavioral Therapy</div> 
+                                    <div className="drop-text">Interpersonal Therapy</div>
                                 </> : <></>}
                                 </div>
                             </div>
@@ -68,9 +68,9 @@ const Nav = () => {
                                 <div className={ chevronTwo ? "dropdown-special" : "dropdown-no-special"}>
                                 { chevronTwo ? 
                                 <>
-                                <div className="drop-text">Patient Intake Forms</div> 
-                                <div className="drop-text">Schedule Consultation</div>
-                                <div className="drop-text">Contact Dr. Aspenleiter</div>
+                                    <div className="drop-text">Patient Intake Forms</div> 
+                                    <div className="drop-text">Schedule Consultation</div>
+                                    <div className="drop-text">Contact Dr. Aspenleiter</div>
                                 </> : <></>}
                                 </div>
                             </div>
