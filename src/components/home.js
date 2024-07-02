@@ -3,7 +3,7 @@ import useWindowWidth from "./useWindowWidth";
 
 const Home = () => {
     const width = useWindowWidth(945);
-    const widthTwo = useWindowWidth(730);
+    const widthTwo = useWindowWidth(700);
 
     return (
         <>
