@@ -1,10 +1,12 @@
 import React from "react";
 import useWindowWidth from "./useWindowWidth";
-import Card from "./Card";
+import Card from "./card";
+import UserMap from "./map";
 
 const Home = () => {
     const width = useWindowWidth(945);
     const widthTwo = useWindowWidth(700);
+    const widthThree = useWindowWidth(485);
     const path = "/static/media/";
     const specialties = [
         {
@@ -97,12 +99,26 @@ const Home = () => {
                     <div className="spacer-3">
 
                     </div>
-                    <div className="expertise">
+                    <div className={widthThree ? "expertise-2" : "expertise"}>
                         {
                             specialties.map((item) => {
-                                return <Card key={item.title} img={item.img} title={item.title} />
+                                return <Card key={item.title} img={item.img} title={item.title} widthThree={widthThree}/>
                             })
                         }
+                    </div>
+                </div>
+            </div>
+            <div className="spacer-2"></div>
+            <div className="specialties">
+                <div className="specialties-container">
+                    <div className="landing-title title">
+                        Our Locations
+                    </div>
+                    <div className="spacer-3"></div>
+                    <div className="expertise">
+                        <UserMap position={{ lat: 42.9470, lng: -76.4291 }} zoom={14} address={"1551 E Genesee St #110, Skaneateles, NY 13152"}/>
+                        <UserMap position={{ lat: 43.0481, lng: -76.1474 }} zoom={13} address={"750 E Adams St, Syracuse, NY 13210"}/>
+                        
                     </div>
                 </div>
             </div>
