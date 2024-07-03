@@ -77,11 +77,12 @@ const Nav = () => {
                             <div className="nav-text">
                                 Insurance
                             </div>
-                            <div className="nav-text">
-                                About
-                            </div>
+                            
                             <div className="nav-text">
                                 Locations
+                            </div>
+                            <div className="nav-text">
+                                About
                             </div>
                         </div>
                     }

@@ -63,8 +63,8 @@ const NavPage = (props) => {
                     </div>
                 </div>
                 <div className="navpage-text"> Insurance </div>
-                <div className="navpage-text"> About </div>
                 <div className="navpage-text"> Locations </div>
+                <div className="navpage-text"> About </div>
             </div>
         </div>
     );

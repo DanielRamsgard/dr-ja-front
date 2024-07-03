@@ -122,7 +122,27 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="content"> </div>
+            <div className="spacer-2"></div>
+            <div className="specialties">
+                <div className="specialties-container">
+                    <div className="landing-title title">
+                        Dr. Julie A. Aspenlieter, PysD
+                    </div>
+                    <div className="spacer-3"></div>
+                    <div className="expertise-3">
+                        <div className="about-img-container">
+                            <img alt="Dr. Julie Ann Aspenlieter, PysD" src="/static/media/dr.jpeg" className="about-img"></img>
+                        </div>
+                        <div className="header-text-2">
+                            Dr. Aspenleiter is a distinguished clinical psychologist known for her empathetic approach and expertise in human behavior. She integrates advanced therapeutic techniques with compassionate care, empowering patients to navigate challenges with resilience. Her contributions to the field reflect a commitment to holistic healing and personalized treatment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="spacer-2"></div>
+            <div className="bottom-header">
+
+            </div>
         </>
     );
 }
