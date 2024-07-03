@@ -2,14 +2,13 @@ import React from "react";
 import useWindowWidth from "./useWindowWidth";
 import Card from "./card";
 import UserMap from "./map";
-import BottomHeader from "./bottomHeader";
 
 const Home = () => {
     const width = useWindowWidth(945);
     const widthTwo = useWindowWidth(700);
     const widthThree = useWindowWidth(485);
     const widthFour = useWindowWidth(970);
-    const widthSix = useWindowWidth(590);
+    const widthSix = useWindowWidth(580);
     const path = "/static/media/";
     const specialties = [
         {
@@ -163,7 +162,6 @@ const Home = () => {
                 </div>
             </div>
             <div className="spacer-2"></div>
-            <BottomHeader />
         </>
     );
 }
