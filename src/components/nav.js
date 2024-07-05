@@ -75,19 +75,25 @@ const Nav = () => {
                                     <div className="drop-text" onClick={() => {
                                         navigate("/new-patient-forms");
                                     }}>Patient Intake Forms</div> 
-                                    <div className="drop-text">Schedule Consultation</div>
-                                    <div className="drop-text">Contact Dr. Aspenleiter</div>
+                                    <div className="drop-text" onClick={() => {
+                                        navigate("/new-patient-forms");
+                                    }}>Schedule Appointment</div>
+                                    <div className="drop-text" onClick={() => {
+                                        navigate("/about");
+                                    }}>
+                                Contact Dr. Aspenleiter</div>
                                 </> : <></>}
                                 </div>
                             </div>
-                            <div className="nav-text">
-                                Insurance
-                            </div>
                             
-                            <div className="nav-text">
+                            <div className="nav-text" onClick={() => {
+                                navigate("/locations");
+                            }}>
                                 Locations
                             </div>
-                            <div className="nav-text">
+                            <div className="nav-text" onClick={() => {
+                                navigate("/about");
+                            }}>
                                 About
                             </div>
                         </div>

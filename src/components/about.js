@@ -1,17 +1,17 @@
 import React from "react";
-import Home from "./home";
 import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
+import Info from "./info";
 
-const Land = () => {
-
+const About = () => {
     return (
         <>
             <Nav />
-            <Home />
+            <div className="room"></div>
+            <Info />
             <BottomHeader />
         </>
     );
 }
 
-export default Land;
+export default About

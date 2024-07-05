@@ -1,13 +1,12 @@
 import React from "react";
 import useWindowWidth from "./useWindowWidth";
 import Card from "./card";
-import UserMap from "./map";
 import Split from "./split";
+import Locations from "./locations";
+import Info from "./info";
 
 const Home = () => {
     const widthThree = useWindowWidth(485);
-    const widthFour = useWindowWidth(970);
-    const widthSix = useWindowWidth(580);
     const path = "/static/media/";
     const specialties = [
         {
@@ -55,56 +54,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="spacer-2"></div>
-            <div className="specialties">
-                <div className="specialties-container">
-                    <div className="landing-title title">
-                        Her Locations
-                    </div>
-                    <div className="spacer-3"></div>
-                    <div className="expertise">
-                        <UserMap position={{ lat: 42.9470, lng: -76.4291 }} zoom={14} address={"1551 E Genesee St #110, Skaneateles, NY 13152"}/>
-                        <UserMap position={{ lat: 43.0481, lng: -76.1474 }} zoom={13} address={"750 E Adams St, Syracuse, NY 13210"}/>
-                        
-                    </div>
-                </div>
-            </div>
+            <Locations />
             <div className="spacer-2"></div>
-            <div className="specialties">
-                <div className="specialties-container" id="contact">
-                    <div className="landing-title title">
-                        Dr. Julie A. Aspenlieter, PysD
-                    </div>
-                    <div className="spacer-3"></div>
-                    <div className="expertise-3">
-                        <div className="about-img-container">
-                            <img alt="Dr. Julie Ann Aspenlieter, PysD" src="/static/media/dr.jpeg" className="about-img"></img>
-                        </div>
-                        {widthFour ? widthSix ? <div className="grey-2"></div> : <div className="grey-bar-new"></div> : <div className="grey-bar"></div>}
-                        <div className="header-text-2">
-                            Dr. Aspenleiter is a distinguished clinical psychologist known for her empathetic approach and expertise in human behavior. She integrates advanced therapeutic techniques with compassionate care, empowering patients to navigate challenges with resilience. Her contributions to the field reflect a commitment to holistic healing and personalized treatment.
-                        </div>
-                        
-                        {widthFour ? widthSix ? <div className="grey-2"></div> : <div className="grey-bar-new"></div> : <div className="grey-bar"></div>}
-                        <div className="container">
-                            <div>
-                                <h2>Contact</h2>
-                                <p> <div className="new-color"> Fill Out Intake Forms </div>
-                                    New Patients </p>
-                                <p> <div className="new-color"> GIVE HER A CALL </div>
-                                (315) 857-7864</p>
-                            </div>
-                            <div>
-                                <h2>Locations</h2>
-                                <p><div className="new-color"> 3460 County Line Rd </div>
-                                Skaneateles, NY 13152
-                                </p>
-                                <p><div className="new-color"> 314 E. Seneca Street </div>
-                                Manlius, New York 13104</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Info />
             <div className="spacer-2"></div>
         </>
     );

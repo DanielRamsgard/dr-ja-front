@@ -1,17 +1,17 @@
 import React from "react";
-import Home from "./home";
+import Locations from "./locations";
 import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
 
-const Land = () => {
-
+const MapLocations = () => {
     return (
         <>
             <Nav />
-            <Home />
+            <div className="room"></div>
+            <Locations />
             <BottomHeader />
         </>
     );
 }
 
-export default Land;
+export default MapLocations
