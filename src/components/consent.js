@@ -1,6 +1,7 @@
 import React from "react";
 
 const Consent = () => {
+
     return (
         <>
             <div className="doc-container">

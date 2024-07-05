@@ -654,6 +654,11 @@ code {
     display: flex; 
     flex-wrap: nowrap;
     column-gap: 5px;
+    margin-bottom: -20px;
+}
+
+.plus {
+    margin-bottom: 0px; 
 }
 
 .blur {
@@ -672,17 +677,26 @@ code {
     row-gap: 20px;
 }
 
-.form-julie {
+.form-julie-2, .form-julie {
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
     font-weight: 300;
     text-align: center;
 }
 
-.intake {
+.form-julie-2 {
+    font-size: 30px;
+}
+
+.intake-2, .intake {
     font-family: Poppins;
     font-size: 60px;
     font-weight: 200;
+    text-align: center;
+}
+
+.intake-2 {
+    font-size: 30px;
 }
 
 .submit {
@@ -714,16 +728,21 @@ code {
     position: relative;
 }
 
-.pdf-container-2 {
+.pdf-container-2-2, .pdf-container-2 {
     width: 62%;
     box-shadow: 0px 2px 20px var(--box-shadow-two);
     background-color: white;
     position: relative;
     z-index: 2;
+    margin-bottom: 50px;
 }
 
-.link {
-    color: rgb(100,100,100);   
+.pdf-container-2-2 {
+    margin-bottom: 70px;
+    width: 95%;
+}
+
+.link { 
     text-decoration: underline;
     transition: .7s ease;
     cursor: pointer;
@@ -767,12 +786,20 @@ code {
     text-align: left;
 }
 
+ol {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
 li {
-    margin: 5px 0;               /* Sets the margin around each item */
+    margin: 5px 0;                 /* Sets the margin around each item */
     padding: 15px;                 /* Sets the background color */
+    font-family: Poppins;          /* Sets the font */
     border-bottom: 1px solid #ddd; /* Adds a border at the bottom */
-    font-family: Poppins; /* Sets the font */
-  }
+    width: 100%;                   /* Makes sure the <li> spans the full width */
+    box-sizing: border-box;        /* Ensures padding and border are included in width */
+}
 
 .form-container-info {
     display: flex;
