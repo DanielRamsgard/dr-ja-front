@@ -9,7 +9,7 @@ const ReleaseAuth = () => {
                     <div className="doc-title-container-text">1551 East Genesee Street</div>
                     <div className="doc-title-container-text">Skaneateles, NY 13152</div>
                     <div className="doc-title-container-text">315-857-7864</div>
-                    <div className="doc-title-container-text margin">
+                    <div className="doc-title-container-text margin-2">
                     Authorization for Release and Exchange of Information
                     </div>
                     <div className="margin">
@@ -41,7 +41,7 @@ const ReleaseAuth = () => {
                     </div>
                 </form>
                 <div className="middle-text-form">
-                    The information exchanged will relate to the academic/social/psychiatric/medical history for myself or my child. The permission may be withdrawn at any time upon the written notification to Dr. Aspenleiter.
+                    The information exchanged will relate to the academic / social / psychiatric / medical history for myself or my child. The permission may be withdrawn at any time upon the written notification to Dr. Aspenleiter.
                 </div>
                 <form className="form-tag">
                     <div className="form-container-info-2">
