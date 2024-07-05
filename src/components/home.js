@@ -5,8 +5,6 @@ import UserMap from "./map";
 import Split from "./split";
 
 const Home = () => {
-    const width = useWindowWidth(945);
-    const widthTwo = useWindowWidth(700);
     const widthThree = useWindowWidth(485);
     const widthFour = useWindowWidth(970);
     const widthSix = useWindowWidth(580);

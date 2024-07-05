@@ -10,11 +10,11 @@ const Form = () => {
     const [form, setForm] = useState("consent");
 
     const formShow = () => {
-        if (form == "consent"){
+        if (form === "consent"){
             return <Consent />;
-        } else if (form == "release auth") {
+        } else if (form === "release auth") {
             return <ReleaseAuth />
-        } else if (form == "client info") {
+        } else if (form === "client info") {
             return <ClientInfo />
         }
     }
@@ -41,7 +41,7 @@ const Form = () => {
                                         <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
                                     </svg>
                                 </div>
-                                <div className={ chevron ? "dropdown" : "dropdown-no"}>
+                                <div className={ chevron ? "dropdown-new" : "dropdown-no-new"}>
                                 { chevron ? 
                                 <>
                                     <div className="drop-text text-text" onClick={() => {

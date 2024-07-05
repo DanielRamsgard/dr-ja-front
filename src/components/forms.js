@@ -1,7 +1,7 @@
 import React from "react";
 import BottomHeader from "./bottomHeader";
 import Nav from "./nav";
-import Form from "./Form";
+import Form from "./form";
 
 const Forms = () => {
     return (

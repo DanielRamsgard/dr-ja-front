@@ -264,7 +264,7 @@ code {
     transition: .4s ease;
 }
 
-.dropdown-no {
+.dropdown-no-new, .dropdown-no {
     position: absolute;
     bottom: -60px;
     width: 0px;
@@ -284,7 +284,11 @@ code {
     transition: .7s width ease;
 }
 
-.dropdown {
+.dropdown-no-new {
+    bottom: -90px;
+}
+
+.dropdown-new, .dropdown {
     position: absolute;
     bottom: -60px;
     right: 50%;
@@ -305,6 +309,10 @@ code {
     transition: .4s ease;
     font-size: var(--size-two);
     font-weight: 200;
+}
+
+.dropdown-new {
+    bottom: -90px;
 }
 
 .dropdown-no-special {
