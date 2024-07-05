@@ -809,7 +809,7 @@ li {
     box-sizing: border-box;        /* Ensures padding and border are included in width */
 }
 
-.form-container-info-2, .form-container-info {
+.form-container-info-3, .form-container-info-2, .form-container-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -818,6 +818,11 @@ li {
     margin-top: 25px;
     row-gap: 30px;
 
+}
+
+.form-container-info-3 {
+    flex-direction: column;
+    width: 100%;
 }
 
 .form-container-info-2 {
@@ -832,14 +837,18 @@ li {
     justify-content: center;
 }
 
-.input-field {
+.input-field-2, .input-field {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.input-info-2, .input-info {
+.input-field-2 {
+    width: 100%;
+}
+
+.input-info-3, .input-info-2, .input-info {
     border: none;
     border-bottom: 2px solid #ddd;
     width: 200px;
@@ -851,11 +860,15 @@ li {
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
+.input-info-3 {
+    width: 100%;
+}
+
 .input-info-2 {
     width: 240px;
 }
 
-.form-text-2, .form-text {
+.form-text-3, .form-text-2, .form-text {
     margin-top: 3px;
     display: flex;
     justify-content: flex-start;
@@ -863,6 +876,16 @@ li {
     align-items: center;
     font-family: Poppins;
     font-size: large;
+}
+
+.form-text-3 {
+    width: 100%;
+}
+
+.margin-7 {
+    margin-top: 100px;
+    font-size: large;
+    font-weight: 700;
 }
 
 .form-text-2 {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Consent from "./consent";
 import useWindowWidth from "./useWindowWidth";
 import ReleaseAuth from "./releaseAuth";
+import ClientInfo from "./clientInfo";
 
 const Form = () => {
     const width = useWindowWidth(1000);
@@ -13,6 +14,8 @@ const Form = () => {
             return <Consent />;
         } else if (form == "release auth") {
             return <ReleaseAuth />
+        } else if (form == "client info") {
+            return <ClientInfo />
         }
     }
 
@@ -47,6 +50,9 @@ const Form = () => {
                                     <div className="drop-text text-text" onClick={() => {
                                         setForm("release auth");
                                     }}>Authorization Release</div>
+                                    <div className="drop-text text-text" onClick={() => {
+                                        setForm("client info");
+                                    }}>Demographic Information</div>
                                 </> : <></>}
                                 </div>
                 </div>
