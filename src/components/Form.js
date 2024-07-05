@@ -1,6 +1,7 @@
 import React from "react";
 import Consent from "./consent";
 import useWindowWidth from "./useWindowWidth";
+import ReleaseAuth from "./releaseAuth";
 
 const Form = () => {
     const width = useWindowWidth(1000);
@@ -21,7 +22,8 @@ const Form = () => {
             <div className="pdf-container">
                 <div className="space"></div>
                 <div className={width ? "pdf-container-2-2" : "pdf-container-2"}>
-                    <Consent />
+                    {/* <Consent /> */}
+                    <ReleaseAuth />
                 </div>
                 <div className="space-2"></div>
             </div>

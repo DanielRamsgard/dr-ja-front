@@ -801,7 +801,7 @@ li {
     box-sizing: border-box;        /* Ensures padding and border are included in width */
 }
 
-.form-container-info {
+.form-container-info-2, .form-container-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -812,6 +812,18 @@ li {
 
 }
 
+.form-container-info-2 {
+    flex-direction: column;
+}
+
+.form-tag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .input-field {
     display: flex;
     flex-direction: column;
@@ -819,7 +831,7 @@ li {
     justify-content: center;
 }
 
-.input-info {
+.input-info-2, .input-info {
     border: none;
     border-bottom: 2px solid #ddd;
     width: 200px;
@@ -831,7 +843,11 @@ li {
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
 }
 
-.form-text {
+.input-info-2 {
+    width: 350px;
+}
+
+.form-text-2, .form-text {
     margin-top: 3px;
     display: flex;
     justify-content: flex-start;
@@ -839,6 +855,16 @@ li {
     align-items: center;
     font-family: Poppins;
     font-size: large;
+}
+
+.form-text-2 {
+    width: 350px;
+}
+
+.middle-text-form {
+    font-family: Poppins;
+    font-size: large;
+    padding-top: 40px;
 }
 
 .space {
