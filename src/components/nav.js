@@ -22,6 +22,7 @@ const Nav = () => {
                 <div className="nav-container-2">
                     <div className="dr" onClick={() => {
                             navigate("/");
+                            updateNav(false);
                         }}>
                         Dr. Aspenleiter
                     </div>
@@ -74,12 +75,15 @@ const Nav = () => {
                                 <>
                                     <div className="drop-text" onClick={() => {
                                         navigate("/new-patient-forms");
+                                        updateNav(false);
                                     }}>Patient Intake Forms</div> 
                                     <div className="drop-text" onClick={() => {
                                         navigate("/new-patient-forms");
+                                        updateNav(false);
                                     }}>Schedule Appointment</div>
                                     <div className="drop-text" onClick={() => {
                                         navigate("/about");
+                                        updateNav(false);
                                     }}>
                                 Contact Dr. Aspenleiter</div>
                                 </> : <></>}
@@ -88,11 +92,13 @@ const Nav = () => {
                             
                             <div className="nav-text" onClick={() => {
                                 navigate("/locations");
+                                updateNav(false);
                             }}>
                                 Locations
                             </div>
                             <div className="nav-text" onClick={() => {
                                 navigate("/about");
+                                updateNav(false);
                             }}>
                                 About
                             </div>

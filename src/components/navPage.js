@@ -18,6 +18,7 @@ const NavPage = (props) => {
             <div className="navpage-container">
                 <div className="navpage-text" onClick={() => {
                     navigate("/");
+                    props.updateNav(false);
                 }}> Home </div>
                 <div className="navpage-text" 
                     onMouseEnter={() => 
@@ -63,14 +64,27 @@ const NavPage = (props) => {
                     <>
                         <div className="drop-text" onClick={() => {
                                         navigate("/new-patient-forms");
+                                        props.updateNav(false);
                                     }}>Patient Intake Forms</div> 
-                        <div className="drop-text">Schedule Consultation</div>
-                        <div className="drop-text">Contact Dr. Aspenleiter</div>
+                        <div className="drop-text" onClick={() => {
+                                        navigate("/new-patient-forms");
+                                        props.updateNav(false);
+                                    }}>Schedule Consultation</div>
+                        <div className="drop-text" onClick={() => {
+                                        navigate("/about");
+                                        props.updateNav(false);
+                                    }}>Contact Dr. Aspenleiter</div>
                     </> : <></>}
                     </div>
                 </div>
-                <div className="navpage-text"> Locations </div>
-                <div className="navpage-text"> About </div>
+                <div className="navpage-text" onClick={() => {
+                                        navigate("/locations");
+                                        props.updateNav(false);
+                                    }}> Locations </div>
+                <div className="navpage-text" onClick={() => {
+                                        navigate("/about");
+                                        props.updateNav(false);
+                                    }}> About </div>
             </div>
         </div>
     );
