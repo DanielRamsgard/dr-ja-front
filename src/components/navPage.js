@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavPage = (props) => {
     const [chevron, setChevron] = useState(false);
     const [chevronTwo, setChevronTwo] = useState(false);
+    const navigate = useNavigate("/");
 
     return (
         <div className="container-container">
@@ -14,6 +16,9 @@ const NavPage = (props) => {
                 </div>
             </div>
             <div className="navpage-container">
+                <div className="navpage-text" onClick={() => {
+                    navigate("/");
+                }}> Home </div>
                 <div className="navpage-text" 
                     onMouseEnter={() => 
                         {
@@ -56,7 +61,9 @@ const NavPage = (props) => {
                     <div className={ chevronTwo ? "dropdown-special" : "dropdown-no-special"}>
                     { chevronTwo ? 
                     <>
-                        <div className="drop-text">Patient Intake Forms</div> 
+                        <div className="drop-text" onClick={() => {
+                                        navigate("/new-patient-forms");
+                                    }}>Patient Intake Forms</div> 
                         <div className="drop-text">Schedule Consultation</div>
                         <div className="drop-text">Contact Dr. Aspenleiter</div>
                     </> : <></>}

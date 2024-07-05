@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import useWindowWidth from "./useWindowWidth";
 import NavPage from "./navPage";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
     const width = useWindowWidth(1000);
     const [nav, setNav] = useState(false);
     const [chevron, setChevron] = useState(false);
     const [chevronTwo, setChevronTwo] = useState(false);
+    const navigate = useNavigate("/");
 
     const updateNav = (nav) => {
         setNav(nav);
@@ -18,7 +20,9 @@ const Nav = () => {
             { nav ? <NavPage updateNav={updateNav}/> : <></> }
             <div className="nav-container">
                 <div className="nav-container-2">
-                    <div className="dr">
+                    <div className="dr" onClick={() => {
+                            navigate("/");
+                        }}>
                         Dr. Aspenleiter
                     </div>
                     { width ?
@@ -68,7 +72,9 @@ const Nav = () => {
                                 <div className={ chevronTwo ? "dropdown-special" : "dropdown-no-special"}>
                                 { chevronTwo ? 
                                 <>
-                                    <div className="drop-text">Patient Intake Forms</div> 
+                                    <div className="drop-text" onClick={() => {
+                                        navigate("/new-patient-forms");
+                                    }}>Patient Intake Forms</div> 
                                     <div className="drop-text">Schedule Consultation</div>
                                     <div className="drop-text">Contact Dr. Aspenleiter</div>
                                 </> : <></>}

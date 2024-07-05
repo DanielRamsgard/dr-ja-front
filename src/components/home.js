@@ -72,7 +72,7 @@ const Home = () => {
             </div>
             <div className="spacer-2"></div>
             <div className="specialties">
-                <div className="specialties-container">
+                <div className="specialties-container" id="contact">
                     <div className="landing-title title">
                         Dr. Julie A. Aspenlieter, PysD
                     </div>
