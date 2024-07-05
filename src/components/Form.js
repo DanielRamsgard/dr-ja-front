@@ -46,12 +46,15 @@ const Form = () => {
                                 <>
                                     <div className="drop-text text-text" onClick={() => {
                                         setForm("consent");
+                                        setChevron(false);
                                     }}>Patient Consent</div> 
                                     <div className="drop-text text-text" onClick={() => {
                                         setForm("release auth");
+                                        setChevron(false);
                                     }}>Authorization Release</div>
                                     <div className="drop-text text-text" onClick={() => {
                                         setForm("client info");
+                                        setChevron(false);
                                     }}>Demographic Information</div>
                                 </> : <></>}
                                 </div>

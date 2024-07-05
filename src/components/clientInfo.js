@@ -4,16 +4,13 @@ const ReleaseAuth = () => {
     return (
         <>
             <div className="doc-container">
-                <div className="doc-title-container">
+                <div className="doc-title-container-2">
                     <div className="doc-title-container-text">Julie A. Aspenleiter, Psy.D.</div>
                     <div className="doc-title-container-text">1551 East Genesee Street</div>
                     <div className="doc-title-container-text">Skaneateles, NY 13152</div>
                     <div className="doc-title-container-text">315-857-7864</div>
-                    <div className="doc-title-container-text margin-2">
-                    Authorization for Release and Exchange of Information
-                    </div>
-                    <div className="margin">
-                    Permission is granted for the release and exchange of information between Dr. Julie Aspenleiter and the following: 
+                    <div className="doc-title-container-text margin-8">
+                        Client Demographic Information
                     </div>
                 <form className="form-tag">
                     <div className="form-container-info-3">

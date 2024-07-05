@@ -10,11 +10,11 @@ const Consent = () => {
                     <div className="doc-title-container-text">1551 East Genesee Street</div>
                     <div className="doc-title-container-text">Skaneateles, NY 13152</div>
                     <div className="doc-title-container-text">315-857-7864</div>
-                    <div className="doc-title-container-text margin">
-                    Informed Consent and Limits of Confidentiality for Psychological Services
+                    <div className="doc-title-container-text margin margin-20">
+                        Informed Consent and Limits of Confidentiality for Psychological Services
                     </div>
                     <div className="margin">
-                    You understand that the information regarding psychological treatment is kept confidential by the therapist and will not be revealed to others without your written consent. The confidentiality of there services will be maintain except for the following circumstances. 
+                        You understand that the information regarding psychological treatment is kept confidential by the therapist and will not be revealed to others without your written consent. The confidentiality of there services will be maintain except for the following circumstances. 
                     </div>
                     <ol className="margin">
                     <li>If a legally signed release of information form is submitted to Dr. Aspenleiter by an agency, business or individual, she will comply with the limits of this request. </li>
