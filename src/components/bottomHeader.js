@@ -17,7 +17,9 @@ const BottomHeader = () => {
                 1551 E Genesee St #110, Skaneateles, NY 13152 | 750 E Adams St, Syracuse, NY 13210
                 </div>
                 <div className="bottom-header-text">
-                &copy; All Rights Reserved. Dr. Julie A. Aspenleiter. Website by Daniel Ramsgard, RFS Web Design
+                &copy; All Rights Reserved. Dr. Julie A. Aspenleiter. Website by Daniel Ramsgard, <div className="link" onClick={() => {
+                                    window.open("https://www.linkedin.com/in/daniel-ramsgard-28b196284/", '_blank', 'noopener,noreferrer');
+                                }}> {" RFS Web Design."} </div>
                 </div>
             </div>
         </>

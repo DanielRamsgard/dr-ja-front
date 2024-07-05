@@ -1,13 +1,16 @@
-import Nav from "./components/nav";
-import Home from "./components/home";
-import BottomHeader from "./components/bottomHeader";
+import Land from "./components/Land";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Forms from "./components/forms";
 
 function App() {
     return (
         <>
-            <Nav />
-            <Home />
-            <BottomHeader />
+            <Router >
+                <Routes>
+                    <Route path="/" element={<Land />}/>
+                    <Route path="new-patient-forms" element={<Forms />}/>
+                </Routes>
+            </Router>
         </>
     );
 }

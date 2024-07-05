@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 body {
   margin: 0;
@@ -91,10 +92,6 @@ code {
     row-gap: 15px;
 }
 
-.spacer {
-    height: 120px;
-    width: 100%;
-}
 
 .dr, .landing-title {
     font-size: 50px;
@@ -367,6 +364,11 @@ code {
 .landing-container-new {
     width: 100%;
     height: 100vh;
+}
+
+.spacer {
+    height: 120px;
+    width: 100%;
 }
 
 .spacer-2 {
@@ -649,4 +651,182 @@ code {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+    display: flex; 
+    flex-wrap: nowrap;
+    column-gap: 5px;
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.top-form {
+    background-color: var(--landing-color);
+    padding-top: 160px;
+    padding-bottom: 115px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.form-julie {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.intake {
+    font-family: Poppins;
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.submit {
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: var(--button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s ease;
+    box-shadow: 10px 10px 4px var(--box-shadow);
+    font-family: Poppins;
+    color: white;
+    cursor: pointer;
+}
+
+.submit:hover {
+    transform: scale(1.02);
+}
+
+.pdf-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245,245,245);
+    position: relative;
+}
+
+.pdf-container-2 {
+    width: 62%;
+    box-shadow: 0px 2px 20px var(--box-shadow-two);
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.link {
+    color: rgb(100,100,100);   
+    text-decoration: underline;
+    transition: .7s ease;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: rgb(40,40,40);
+}
+
+.doc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.doc-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.doc-title-container-text {
+    font-family: Poppins;
+    font: large;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.margin {
+    margin-top: 20px;
+    font-family: Poppins;
+    text-align: left;
+}
+
+li {
+    margin: 5px 0;               /* Sets the margin around each item */
+    padding: 15px;                 /* Sets the background color */
+    border-bottom: 1px solid #ddd; /* Adds a border at the bottom */
+    font-family: Poppins; /* Sets the font */
+  }
+
+.form-container-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    margin-top: 25px;
+    row-gap: 30px;
+
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-info {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    width: 200px;
+    height: 30px;
+    font-size: large;
+    font-family: Poppins;
+    line-height: 30px; /* Adjust line-height to match the height of the input */
+    padding-top: 5px; /* Adjust padding-bottom to fine-tune the cursor position */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+.form-text {
+    margin-top: 3px;
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    align-items: center;
+    font-family: Poppins;
+    font-size: large;
+}
+
+.space {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    background-color: var(--landing-color);
+}
+
+.space-2 {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0%;
+    background-color: var(--landing-color);
+    z-index: 0;
 }
