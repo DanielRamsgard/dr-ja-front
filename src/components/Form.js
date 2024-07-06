@@ -6,6 +6,7 @@ import ClientInfo from "./clientInfo";
 
 const Form = () => {
     const width = useWindowWidth(1000);
+    const widthTwo = useWindowWidth(700);
     const [chevron, setChevron] = useState(false);
     const [form, setForm] = useState("consent");
     const [submit, setSubmit] = useState({
@@ -57,10 +58,10 @@ const Form = () => {
     return (
         <>
             <div className="top-form">
-                <div className={width ? "form-julie-2" : "form-julie"}>
+                <div className={widthTwo ? "form-julie-2" : "form-julie"}>
                     Dr. Julie A. Aspenleiter
                 </div>
-                <div className={width ? "intake-2" : "intake"}>
+                <div className={widthTwo ? "intake-2" : "intake"}>
                     New Patient Intake Forms
                 </div>
                 <div className="nav-text submit" onMouseEnter={() => {
