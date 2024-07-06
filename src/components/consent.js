@@ -1,6 +1,11 @@
 import React from "react";
 
-const Consent = () => {
+const Consent = (props) => {
+    const handleChange = (e, form, value) => {
+        let newSubmit = { ...props.submit }; // Make a shallow copy of props.submit
+        newSubmit[form][value] = e.target.value; // Use bracket notation to assign the value
+        return newSubmit;
+    }
 
     return (
         <>
@@ -29,21 +34,27 @@ const Consent = () => {
                 <form>
                     <div className="form-container-info">
                         <div className="input-field">
-                            <input className="input-info">
+                            <input className="input-info" value={props.submit.formOne.signature} onChange={(e) => {
+                                props.updateSubmit(handleChange(e, "formOne", "signature"));
+                            }}>
                             </input>
                             <div className="form-text">
                                 Signature
                             </div>
                         </div>
                         <div className="input-field">
-                            <input className="input-info">
+                            <input className="input-info" value={props.submit.formOne.date} onChange={(e) => {
+                                props.updateSubmit(handleChange(e, "formOne", "date"));
+                            }}>
                             </input>
                             <div className="form-text">
                                 Date
                             </div>
                         </div>
                         <div className="input-field">
-                            <input className="input-info">
+                            <input className="input-info" value={props.submit.formOne.printName} onChange={(e) => {
+                                props.updateSubmit(handleChange(e, "formOne", "printName"));
+                            }}>
                             </input>
                             <div className="form-text">
                                 Print Name

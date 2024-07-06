@@ -8,14 +8,49 @@ const Form = () => {
     const width = useWindowWidth(1000);
     const [chevron, setChevron] = useState(false);
     const [form, setForm] = useState("consent");
+    const [submit, setSubmit] = useState({
+        formOne : {
+            signature : "",
+            date : "",
+            printName : "",
+        },
+        formTwo : {
+            name : "",
+            address : "",
+            number : "",
+            signature : "",
+            nameBirth : "",
+            date : "",
+            witnessSignature : "",
+        },
+        formThree : {
+            name : "",
+            date : "",
+            social : "",
+            address : "",
+            number : "",
+            emergency : "",
+            emergencyNumber : "",
+            parent : "",
+            childAddress : "",
+            childNumber : "",
+        },
+    });
+    
+    function updateSubmit(updatedSubmit) {
+        setSubmit(prevSubmit => ({
+            ...prevSubmit,
+            ...updatedSubmit,
+        }));
+    }
 
     const formShow = () => {
         if (form === "consent"){
-            return <Consent />;
+            return <Consent submit={submit} updateSubmit={updateSubmit}/>;
         } else if (form === "release auth") {
-            return <ReleaseAuth />
+            return <ReleaseAuth submit={submit} updateSubmit={updateSubmit}/>
         } else if (form === "client info") {
-            return <ClientInfo />
+            return <ClientInfo submit={submit} updateSubmit={updateSubmit}/>
         }
     }
 
