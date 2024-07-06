@@ -11,7 +11,7 @@ const Info = () => {
             <div className="specialties">
                 <div className="specialties-container">
                     <div className="landing-title title">
-                        Dr. Julie A. Aspenlieter, PysD
+                        Julie A. Aspenleiter, PysD
                     </div>
                     <div className="spacer-3"></div>
                     <div className="expertise-3">

@@ -8,7 +8,7 @@ const BottomHeader = () => {
         <>
             <div className="bottom-header">
                 <div className="bottom-header-title">
-                    Dr. Aspenleiter, PysD
+                    Dr. Julie Aspenleiter
                 </div>
                 <div className="new-patients" onClick={() => {
                     navigate("/new-patient-forms")
