@@ -1,13 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const BottomHeader = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="bottom-header">
                 <div className="bottom-header-title">
                     Dr. Aspenleiter, PysD
                 </div>
-                <div className="new-patients">
+                <div className="new-patients" onClick={() => {
+                    navigate("/new-patient-forms")
+                }}>
                     NEW PATIENTS
                 </div>
                 <div className="bottom-header-text plus">

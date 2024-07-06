@@ -1,7 +1,9 @@
 import React from "react";
 import useWindowWidth from "./useWindowWidth";
+import { useNavigate } from "react-router-dom";
 
 const Split = () => {
+    const navigate = useNavigate();
     const width = useWindowWidth(945);
     const widthTwo = useWindowWidth(700);
 
@@ -17,7 +19,9 @@ const Split = () => {
                         <div className="landing-title-new-2">
                             Mental health, built around you.
                         </div>
-                        <div className="landing-button">
+                        <div className="landing-button" onClick={() => {
+                            navigate("/new-patient-forms");
+                        }}>
                             Get Started
                         </div>
                 </div>
@@ -37,7 +41,9 @@ const Split = () => {
                                 Support your emotional well-being through therapy, groups, and workshops, led by an expert provider who's focused on your needs.
                             </div>
                         </div>
-                        <div className="landing-button">
+                        <div className="landing-button" onClick={() => {
+                            navigate("/new-patient-forms");
+                        }}>
                             Get Started
                         </div>
                 </div>
@@ -55,7 +61,9 @@ const Split = () => {
                         <div className="landing-subtitle">
                             Support your emotional well-being through therapy, groups, and workshops, led by an expert provider who's focused on your needs.
                         </div>
-                        <div className="landing-button">
+                        <div className="landing-button" onClick={() => {
+                            navigate("/new-patient-forms");
+                        }}>
                             Get Started
                         </div>
                         <div className="spacer">
