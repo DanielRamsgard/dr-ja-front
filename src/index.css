@@ -875,7 +875,7 @@ li {
     line-height: 30px; /* Adjust line-height to match the height of the input */
     padding-top: 5px; /* Adjust padding-bottom to fine-tune the cursor position */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
-    padding-left: 0px;
+    padding-left: 3px;
 }
 
 .input-info-3 {

@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
 import Special from "./special";
+import { useLocation } from "react-router-dom";
 
 const Specialty = (props) => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        }, [pathname]);
+
     const info = [
         {
             alt : "Psychodynamic Psychotherapy",
