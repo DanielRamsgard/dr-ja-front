@@ -111,8 +111,26 @@ const Form = () => {
                 format : "a4"
             });
 
-            const width = pdf.internal.pageSize.getWidth();
-            const height = (canvas.height * width) / canvas.width;
+            let width;
+            let height;
+
+            if (form === "formOne"){
+                width = 446.46;
+                height = 509.4543561030235;
+            }
+            else if (form === "formTwo"){
+                width = 446.46;
+                height = 506.9545800671892;
+            }
+            else if (form === "formThree"){
+                width = 446.46;
+                height = 616.4447704367301;
+            }
+
+            // const width = pdf.internal.pageSize.getWidth();
+            // const height = (canvas.height * width) / canvas.width;
+
+            console.log(width, height);
 
             pdf.addImage(imgData, "PNG", 0, 0, width, height);
             pdf.save("test.pdf");
