@@ -114,8 +114,6 @@ const Form = () => {
             const width = pdf.internal.pageSize.getWidth();
             const height = (canvas.height * width) / canvas.width;
 
-            console.log(width, height);
-
             pdf.addImage(imgData, "PNG", 0, 0, width, height);
             pdf.save("test.pdf");
 
@@ -165,12 +163,15 @@ const Form = () => {
                                 </div>
                 </div>
                 <div className="upon">
-                    Upon submission of the following forms, Dr. Aspenleiter will contact you about scheduling an appointment time. Information is saved between forms.
+                    Upon submission of a form, Dr. Aspenleiter will contact you about scheduling an appointment time. Information is saved between forms.
                 </div>
             </div>
             <div className="pdf-container">
                 <div className="space"></div>
-                <div className={width ? "pdf-container-2-2" : "pdf-container-2"} ref={pdfRef}>
+                <div className={width ? "pdf-container-2-2" : "pdf-container-2"}>
+                    {formShow()}
+                </div>
+                <div className="pdf-container-capture" ref={pdfRef}>
                     {formShow()}
                 </div>
                 <div className="space-2"></div>
