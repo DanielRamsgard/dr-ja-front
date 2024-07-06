@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Consent from "./consent";
 import useWindowWidth from "./useWindowWidth";
 import ReleaseAuth from "./releaseAuth";
@@ -7,7 +7,9 @@ import ClientInfo from "./clientInfo";
 const Form = () => {
     const width = useWindowWidth(1000);
     const widthTwo = useWindowWidth(700);
+    const [validForm, setValidForm] = useState(true);
     const [chevron, setChevron] = useState(false);
+    const [click, setClick] = useState(false);
     const [form, setForm] = useState("consent");
     const [submit, setSubmit] = useState({
         formOne : {
@@ -32,11 +34,41 @@ const Form = () => {
             number : "",
             emergency : "",
             emergencyNumber : "",
-            parent : "",
+            childParent : "",
             childAddress : "",
             childNumber : "",
         },
     });
+
+    useEffect(() => {
+        let timer;
+        if (!validForm) {
+          timer = setTimeout(() => {
+            setValidForm(true);
+          }, 2000);
+        }
+    
+        return () => clearTimeout(timer); // Cleanup the timeout if `validForm` changes before the timeout is complete
+      }, [validForm]);
+
+    const handleSubmit = () => {
+        const isValid = Object.values(submit).every(form => 
+            Object.entries(form).every(([key, value]) => 
+                key.startsWith("child") || value !== ""
+            )
+        );
+
+        setValidForm(isValid);
+        
+        if (isValid) {
+            setClick(true);
+            console.log("All required fields are filled.");
+            // Further submit logic
+        } else {
+            console.log("Some required fields are empty.");
+            // Handle the case where some fields are empty
+        }
+    }
     
     function updateSubmit(updatedSubmit) {
         setSubmit(prevSubmit => ({
@@ -105,8 +137,8 @@ const Form = () => {
                     {formShow()}
                 </div>
                 <div className="space-2"></div>
-                <div className={width ? "submit extra-margin" : "submit"}>
-                    Submit Now
+                <div className={width ? validForm ? "submit extra-margin" : "submit-red extra-margin" : validForm ? "submit" : "submit-red"} onClick={handleSubmit}>
+                    {validForm && click ? "Form Submitted" : "Submit Now"}
                 </div>
             </div>
         </>

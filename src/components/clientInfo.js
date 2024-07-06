@@ -91,8 +91,8 @@ const ReleaseAuth = (props) => {
                 <form className="form-tag">
                     <div className="form-container-info-3">
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.parent} onChange={(e) => {
-                                props.updateSubmit(handleChange(e, "formThree", "parent"));
+                            <input className="input-info-3" value={props.submit.formThree.childParent} onChange={(e) => {
+                                props.updateSubmit(handleChange(e, "formThree", "childParent"));
                             }}>
                             </input>
                             <div className="form-text-3">

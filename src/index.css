@@ -708,7 +708,7 @@ code {
     font-size: 30px;
 }
 
-.submit {
+.submit-red, .submit {
     width: 200px;
     height: 70px;
     border-radius: 20px;
@@ -724,7 +724,11 @@ code {
     z-index: 100;
 }
 
-.submit:hover {
+.submit-red {
+    background-color: red;
+}
+
+.submit-red:hover, .submit:hover {
     transform: scale(1.02);
 }
 
