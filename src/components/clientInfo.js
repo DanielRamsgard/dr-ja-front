@@ -21,7 +21,7 @@ const ReleaseAuth = (props) => {
                 <form className="form-tag">
                     <div className="form-container-info-3">
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.name} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.name} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "name"));
                             }}>
                             </input>
@@ -30,7 +30,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.date} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.date} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "date"));
                             }}>
                             </input>
@@ -39,7 +39,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.social} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.social} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "social"));
                             }}>
                             </input>
@@ -48,7 +48,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.address} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.address} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "address"));
                             }}>
                             </input>
@@ -57,7 +57,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.number} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.number} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "number"));
                             }}>
                             </input>
@@ -66,7 +66,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.emergency} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.emergency} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "emergency"));
                             }}>
                             </input>
@@ -75,7 +75,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formThree.emergencyNumber} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formThree.emergencyNumber} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formThree", "emergencyNumber"));
                             }}>
                             </input>

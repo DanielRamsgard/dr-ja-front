@@ -34,7 +34,7 @@ const Consent = (props) => {
                 <form>
                     <div className="form-container-info">
                         <div className="input-field">
-                            <input className="input-info" value={props.submit.formOne.signature} onChange={(e) => {
+                            <input className="input-info" placeholder="*" value={props.submit.formOne.signature} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formOne", "signature"));
                             }}>
                             </input>
@@ -43,7 +43,7 @@ const Consent = (props) => {
                             </div>
                         </div>
                         <div className="input-field">
-                            <input className="input-info" value={props.submit.formOne.date} onChange={(e) => {
+                            <input className="input-info" placeholder="*" value={props.submit.formOne.date} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formOne", "date"));
                             }}>
                             </input>
@@ -52,7 +52,7 @@ const Consent = (props) => {
                             </div>
                         </div>
                         <div className="input-field">
-                            <input className="input-info" value={props.submit.formOne.printName} onChange={(e) => {
+                            <input className="input-info" placeholder="*" value={props.submit.formOne.printName} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formOne", "printName"));
                             }}>
                             </input>

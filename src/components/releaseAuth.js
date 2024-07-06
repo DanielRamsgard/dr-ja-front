@@ -24,7 +24,7 @@ const ReleaseAuth = (props) => {
                 <form className="form-tag">
                     <div className="form-container-info-3">
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.name} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.name} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "name"));
                             }}>
                             </input>
@@ -33,7 +33,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.address} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.address} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "address"));
                             }}>
                             </input>
@@ -42,7 +42,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.number} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.number} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "number"));
                             }}>
                             </input>
@@ -58,7 +58,7 @@ const ReleaseAuth = (props) => {
                 <form className="form-tag">
                     <div className="form-container-info-3">
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.signature} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.signature} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "signature"));
                             }}>
                             </input>
@@ -67,7 +67,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.nameBirth} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.nameBirth} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "nameBirth"));
                             }}>
                             </input>
@@ -76,7 +76,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.date} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.date} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "date"));
                             }}>
                             </input>
@@ -85,7 +85,7 @@ const ReleaseAuth = (props) => {
                             </div>
                         </div>
                         <div className="input-field-2">
-                            <input className="input-info-3" value={props.submit.formTwo.witnessSignature} onChange={(e) => {
+                            <input className="input-info-3" placeholder="*" value={props.submit.formTwo.witnessSignature} onChange={(e) => {
                                 props.updateSubmit(handleChange(e, "formTwo", "witnessSignature"));
                             }}>
                             </input>
