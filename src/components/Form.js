@@ -104,31 +104,15 @@ const Form = () => {
         const inputData = pdfRef.current;
         try {
             const canvas = await html2canvas(inputData);
-            const imgData = canvas.toDataURL("image./png")
+            const imgData = canvas.toDataURL("image./png");
             const pdf = new jsPDF({
                 orientation : "portrait",
                 unit : "px",
                 format : "a4"
             });
 
-            let width;
-            let height;
-
-            if (form === "formOne"){
-                width = 446.46;
-                height = 509.4543561030235;
-            }
-            else if (form === "formTwo"){
-                width = 446.46;
-                height = 506.9545800671892;
-            }
-            else if (form === "formThree"){
-                width = 446.46;
-                height = 616.4447704367301;
-            }
-
-            // const width = pdf.internal.pageSize.getWidth();
-            // const height = (canvas.height * width) / canvas.width;
+            const width = pdf.internal.pageSize.getWidth();
+            const height = (canvas.height * width) / canvas.width;
 
             console.log(width, height);
 
