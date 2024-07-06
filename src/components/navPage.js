@@ -41,8 +41,13 @@ const NavPage = (props) => {
                         <div className="drop-text" onClick={() => {
                                 navigate("/specialty");
                                 props.updateNav(false);
+                                props.updateIndex(0);
                             }}>Psychodynamic Psychotherapy</div> 
-                        <div className="drop-text">Psychological Assessment</div>
+                        <div className="drop-text" onClick={() => {
+                                navigate("/specialty");
+                                props.updateNav(false);
+                                props.updateIndex(1);
+                            }}>Psychological Assessment</div>
                     </> : <></>}
                     </div>
                 </div>

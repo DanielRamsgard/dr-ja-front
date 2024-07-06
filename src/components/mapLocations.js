@@ -3,10 +3,10 @@ import Locations from "./locations";
 import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
 
-const MapLocations = () => {
+const MapLocations = (props) => {
     return (
         <>
-            <Nav />
+            <Nav updateIndex={props.updateIndex}/>
             <div className="room"></div>
             <Locations />
             <BottomHeader />

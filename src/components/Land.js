@@ -3,11 +3,11 @@ import Home from "./home";
 import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
 
-const Land = () => {
+const Land = (props) => {
 
     return (
         <>
-            <Nav />
+            <Nav updateIndex={props.updateIndex}/>
             <Home />
             <BottomHeader />
         </>

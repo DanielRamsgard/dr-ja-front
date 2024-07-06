@@ -3,7 +3,7 @@ import useWindowWidth from "./useWindowWidth";
 import NavPage from "./navPage";
 import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav = (props) => {
     const width = useWindowWidth(1000);
     const [nav, setNav] = useState(false);
     const [chevron, setChevron] = useState(false);
@@ -17,7 +17,7 @@ const Nav = () => {
 
     return (
         <>
-            { nav ? <NavPage updateNav={updateNav}/> : <></> }
+            { nav ? <NavPage updateIndex={props.updateIndex} updateNav={updateNav}/> : <></> }
             <div className="nav-container">
                 <div className="nav-container-2">
                     <div className="dr" onClick={() => {
@@ -55,8 +55,13 @@ const Nav = () => {
                                     <div className="drop-text" onClick={() => {
                                         navigate("/specialty");
                                         updateNav(false);
+                                        props.updateIndex(0);
                                     }}>Psychodynamic Psychotherapy</div> 
-                                    <div className="drop-text">Psychological Assessment</div>
+                                    <div className="drop-text" onClick={() => {
+                                        navigate("/specialty");
+                                        updateNav(false);
+                                        props.updateIndex(1);
+                                    }}>Psychological Assessment</div>
                                 </> : <></>}
                                 </div>
                             </div>

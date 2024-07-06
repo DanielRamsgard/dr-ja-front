@@ -3,10 +3,10 @@ import Nav from "./nav";
 import BottomHeader from "./bottomHeader";
 import Info from "./info";
 
-const About = () => {
+const About = (props) => {
     return (
         <>
-            <Nav />
+            <Nav updateIndex={props.updateIndex}/>
             <div className="room"></div>
             <Info />
             <BottomHeader />
