@@ -979,12 +979,14 @@ li {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: rgb(245,245,245);
 }
 
 .special-image-container {
-    width: 100%;
+    width: 80%;
     height: 520px;
     overflow: hidden;
+    box-shadow: 0px 0px 40px rgb(0,0,0, .8);
 }
 
 .special-image {

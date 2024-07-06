@@ -12,7 +12,7 @@ const Specialty = (props) => {
         },
         {
             alt : "Psychological Assessment",
-            src : "/static/media/dynamic.jpg",
+            src : "/static/media/assess.webp",
             info : "Psychological assessment is a comprehensive process that involves the systematic evaluation of an individual's psychological, emotional, and behavioral functioning through a variety of methods and tools. These assessments are designed to provide a detailed understanding of a person's strengths, weaknesses, personality traits, and cognitive abilities. The process typically includes the administration of standardized tests, clinical interviews, observations, and the review of relevant records or history. The goal of psychological assessment is to gather in-depth information that can inform diagnosis, treatment planning, and the understanding of complex psychological issues. This process is essential in various contexts, including clinical, educational, and organizational settings, as it helps professionals develop tailored interventions and support strategies. Psychological assessments are valuable for diagnosing mental health disorders, identifying learning disabilities, understanding developmental delays, and evaluating cognitive functioning, among other purposes. The results provide critical insights that guide therapeutic approaches, educational accommodations, and other necessary interventions to improve an individual's overall well-being and functioning.",
         },
     ]
