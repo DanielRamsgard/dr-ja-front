@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Consent from "./consent";
 import useWindowWidth from "./useWindowWidth";
 import ReleaseAuth from "./releaseAuth";
 import ClientInfo from "./clientInfo";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 const Form = () => {
     const width = useWindowWidth(1000);
+    const pdfRef = useRef(null);
     const widthTwo = useWindowWidth(700);
     const [validForm, setValidForm] = useState(true);
     const [chevron, setChevron] = useState(false);
     const [click, setClick] = useState(false);
-    const [form, setForm] = useState("consent");
+    const [form, setForm] = useState("formOne");
     const [submit, setSubmit] = useState({
         formOne : {
+            formName : "formOne",
             signature : "",
             date : "",
             printName : "",
         },
         formTwo : {
+            formName : "formTwo",
             name : "",
             address : "",
             number : "",
@@ -27,6 +32,7 @@ const Form = () => {
             witnessSignature : "",
         },
         formThree : {
+            formName : "formThree",
             name : "",
             date : "",
             social : "",
@@ -39,32 +45,39 @@ const Form = () => {
             childNumber : "",
         },
     });
-
+    
     useEffect(() => {
         let timer;
         if (!validForm) {
-          timer = setTimeout(() => {
-            setValidForm(true);
-          }, 2000);
+            timer = setTimeout(() => {
+                setValidForm(true);
+                setClick(false);
+            }, 400);
         }
     
         return () => clearTimeout(timer); // Cleanup the timeout if `validForm` changes before the timeout is complete
-      }, [validForm]);
-
-    const handleSubmit = () => {
-        const isValid = Object.values(submit).every(form => 
-            Object.entries(form).every(([key, value]) => 
-                key.startsWith("child") || value !== ""
+    }, [validForm]);
+    
+    const handleSubmit = (formNum) => {
+        const isValid = Object.values(submit).some(form =>
+            Object.entries(form).every(([key, value]) =>
+                (form.formName === formNum && (key.startsWith("child") || value !== ""))
             )
         );
-
+    
         setValidForm(isValid);
         
         if (isValid) {
             setClick(true);
-            console.log("All required fields are filled.");
+            setTimeout(() => {
+                setValidForm(true);
+                setClick(false);
+            }, 1000);
+            handlePDFGen();
+            console.log("At least one form is completely filled out.");
             // Further submit logic
         } else {
+            setClick(false);
             console.log("Some required fields are empty.");
             // Handle the case where some fields are empty
         }
@@ -78,12 +91,34 @@ const Form = () => {
     }
 
     const formShow = () => {
-        if (form === "consent"){
+        if (form === "formOne"){
             return <Consent submit={submit} updateSubmit={updateSubmit}/>;
-        } else if (form === "release auth") {
+        } else if (form === "formTwo") {
             return <ReleaseAuth submit={submit} updateSubmit={updateSubmit}/>
-        } else if (form === "client info") {
+        } else if (form === "formThree") {
             return <ClientInfo submit={submit} updateSubmit={updateSubmit}/>
+        }
+    }
+
+    const handlePDFGen = async () => {
+        const inputData = pdfRef.current;
+        try {
+            const canvas = await html2canvas(inputData);
+            const imgData = canvas.toDataURL("image./png")
+            const pdf = new jsPDF({
+                orientation : "portrait",
+                unit : "px",
+                format : "a4"
+            });
+
+            const width = pdf.internal.pageSize.getWidth();
+            const height = (canvas.height * width) / canvas.width;
+
+            pdf.addImage(imgData, "PNG", 0, 0, width, height);
+            pdf.save("test.pdf");
+
+        } catch (e) {
+            console.log(e);
         }
     }
 
@@ -113,15 +148,15 @@ const Form = () => {
                                 { chevron ? 
                                 <>
                                     <div className="drop-text text-text" onClick={() => {
-                                        setForm("consent");
+                                        setForm("formOne");
                                         setChevron(false);
                                     }}>Patient Consent</div> 
                                     <div className="drop-text text-text" onClick={() => {
-                                        setForm("release auth");
+                                        setForm("formTwo");
                                         setChevron(false);
                                     }}>Authorization Release</div>
                                     <div className="drop-text text-text" onClick={() => {
-                                        setForm("client info");
+                                        setForm("formThree");
                                         setChevron(false);
                                     }}>Demographic Information</div>
                                 </> : <></>}
@@ -133,11 +168,13 @@ const Form = () => {
             </div>
             <div className="pdf-container">
                 <div className="space"></div>
-                <div className={width ? "pdf-container-2-2" : "pdf-container-2"}>
+                <div className={width ? "pdf-container-2-2" : "pdf-container-2"} ref={pdfRef}>
                     {formShow()}
                 </div>
                 <div className="space-2"></div>
-                <div className={width ? validForm ? "submit extra-margin" : "submit-red extra-margin" : validForm ? "submit" : "submit-red"} onClick={handleSubmit}>
+                <div className={width ? validForm ? "submit extra-margin" : "submit-red extra-margin" : validForm ? "submit" : "submit-red"} onClick={() => {
+                    handleSubmit(form);
+                }}>
                     {validForm && click ? "Form Submitted" : "Submit Now"}
                 </div>
             </div>
