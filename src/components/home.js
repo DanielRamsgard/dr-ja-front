@@ -10,19 +10,19 @@ const Home = () => {
     const path = "/static/media/";
     const specialties = [
         {
-            img : path + "imgOne.jpg",
+            img : path + "natureOne.jpg",
             title : "Schizophrenia",
         },
         {
-            img : path + "imgTwo.jpg",
+            img : path + "natureTwo.jpg",
             title : "Trauma",
         },
         {
-            img : path + "imgThree.jpg",
+            img : path + "natureThree.jpg",
             title : "Anxiety",
         },
         {
-            img : path + "imgFour.jpg",
+            img : path + "natureFour.jpg",
             title : "OCD",
         },
     ]

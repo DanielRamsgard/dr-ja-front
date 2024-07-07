@@ -24,7 +24,7 @@ const Nav = (props) => {
                             navigate("/");
                             updateNav(false);
                         }}>
-                        Dr. Aspenleiter
+                        Julie Aspenleiter, PsyD
                     </div>
                     { width ?
                         <div className="burger" onClick={() => {
