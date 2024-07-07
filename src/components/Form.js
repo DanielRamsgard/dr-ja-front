@@ -121,7 +121,7 @@ const Form = () => {
             formData.append('file', pdfBlob, form + '.pdf');
 
             try {
-                const res = await fetch("http://localhost:8000", {
+                const res = await fetch("http://localhost:8000/", {
                 method : "POST",
                 body : formData
                 });
