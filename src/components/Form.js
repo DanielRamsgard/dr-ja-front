@@ -104,7 +104,7 @@ const Form = () => {
         const inputData = pdfRef.current;
         try {
             const canvas = await html2canvas(inputData);
-            const imgData = canvas.toDataURL("image./png");
+            const imgData = canvas.toDataURL("image/png");
             const pdf = new jsPDF({
                 orientation : "portrait",
                 unit : "px",
@@ -115,10 +115,25 @@ const Form = () => {
             const height = (canvas.height * width) / canvas.width;
 
             pdf.addImage(imgData, "PNG", 0, 0, width, height);
-            pdf.save("test.pdf");
+            const pdfBlob = pdf.output('blob');
+            // pdf.save("test.pdf");
+            const formData = new FormData();
+            formData.append('file', pdfBlob, form + '.pdf');
 
-        } catch (e) {
-            console.log(e);
+            try {
+                const res = await fetch("http://localhost:8000", {
+                method : "POST",
+                body : formData
+                });
+                
+                console.log(res);
+
+            } catch (err) {
+                console.log(err);
+            }
+
+        } catch (err) {
+            console.log(err);
         }
     }
 
