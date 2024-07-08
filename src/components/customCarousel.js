@@ -19,11 +19,11 @@ const CustomCarousel = () => {
           },
         desktop: {
           breakpoint: { max: 2000, min: 1400 },
-          items: 7
+          items: 5
         },
         desktopSmall: {
             breakpoint: { max: 1400, min: 1200 },
-            items: 6
+            items: 5
           },
         tablet: {
           breakpoint: { max: 1200, min: 1050 },

@@ -7,7 +7,7 @@ const Card = (props) => {
     return (
         <>
             <div className={props.widthThree ? "card-container-2" : "card-container"}>
-                <div className="card-img-container">
+                <div className="card-img-container" draggable="false">
                     <img alt="Card" src={props.img} className="card-img"></img>
                 </div>
                 <div className="card-button" onClick={() => {
