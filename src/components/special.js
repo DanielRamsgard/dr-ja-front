@@ -1,6 +1,9 @@
 import React from "react";
+import useWindowWidth from "./useWindowWidth";
 
 const Special = (props) => {
+    const width = useWindowWidth(700);
+
     return (
         <>
             <div className="special-container">
@@ -8,7 +11,7 @@ const Special = (props) => {
                     <img alt={props.alt} src={props.src} className="special-image"></img>
                 </div>
                 <div className="special-info">
-                    <div className="special-title">
+                    <div className={ width ? "special-title-2" : "special-title"}>
                         {props.alt}
                     </div>
                     <div className="special-text">

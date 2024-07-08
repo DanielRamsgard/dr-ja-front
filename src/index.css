@@ -1083,11 +1083,18 @@ li {
     align-items: center;
 }
 
-.special-title {
+.special-title-2, .special-title {
     font-family: Wittgenstein;
     font-size: 60px;
     font-weight: 600;
     padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.special-title-2 {
+    font-size: 40px;
 }
 
 .special-text {
