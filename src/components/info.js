@@ -20,9 +20,8 @@ const Info = () => {
                         </div>
                         {widthFour ? widthSix ? <div className="grey-2"></div> : <div className="grey-bar-new"></div> : <div className="grey-bar"></div>}
                         <div className="header-text-2">
-                            Dr. Aspenleiter is a distinguished clinical psychologist known for her empathetic approach and expertise in human behavior. She integrates advanced therapeutic techniques with compassionate care, empowering patients to navigate challenges with resilience. Her contributions to the field reflect a commitment to holistic healing and personalized treatment.
-                        </div>
-                        
+                            Julie Aspenleiter, PsyD is a NY State Licensed Psychologist specializing in psychodynamic psychotherapy. Dr. Aspenleiter received a BS from Ithaca college, her Masters and Doctorate in Clinical Psychology (PsyD) from University of Hartford.  Dr. Aspenleiter completed a one-year internship at Upstate Medical University. Upon completion of her training, Dr. Aspenleiter was appointed Clinical Assistant Professor of Psychiatry and the Coordinator of the Child and Adolescent Psychiatry Clinic at Upstate Medical University. Subsequently, Dr. Aspenleiter served as a liaison for The NY State Project Teach Program, providing consultation to pediatricians regarding the mental health needs of their patients. In addition to her private practice, Dr. Aspenleiter currently works as a therapist for NY State’s OnTrackNY Program, providing specialty care for young adults struggling with first episode psychosis.  </div>
+                    
                         {widthFour ? widthSix ? <div className="grey-2"></div> : <div className="grey-bar-new"></div> : <div className="grey-bar"></div>}
                         <div className="container">
                             <div>

@@ -32,8 +32,7 @@ const Home = () => {
             <Split />
             <div className="spacer-2">
                 <div className="header-text">
-                    Dr. Aspenleiter established her practice to meet the increasing need for exceptional mental health services in our area. Providing accurate and prompt evaluations and treatments can significantly enhance the quality of life for many individuals. Dr. Aspenleiter handles every aspect of patient care, ensuring each client receives personalized and effective treatment.
-                </div>
+                Dr. Aspenleiter believes in providing care that is individualized to each person’s unique needs, using empirically validated treatments to optimize results. She utilizes a compassionate, yet goal oriented approach to treatment. Dr. Aspenleiter’s philosophy is that effective therapy should help empower the individual to gain insight and learn to help themselves, ultimately creating change. </div>
             </div> 
             <div className="spacer-2"></div>
             <div className="specialties">
