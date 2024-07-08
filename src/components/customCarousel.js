@@ -2,8 +2,10 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 import Card from "./card";
+import useWindowWidth from "./useWindowWidth";
 
 const CustomCarousel = () => {
+    const width = useWindowWidth(800);
     const responsive = {
         superLargerDesktop: {
           // the naming can be any, depends on you.
@@ -49,35 +51,63 @@ const CustomCarousel = () => {
       const specialties = [
         {
             img : path + "natureOne.jpg",
-            title : "Schizophrenia",
+            title : "Depressive Disorders",
         },
         {
             img : path + "natureTwo.jpg",
-            title : "Trauma",
+            title : "Generalized Anxiety Disorder",
         },
         {
             img : path + "natureThree.jpg",
-            title : "Anxiety",
+            title : "Schizophrenia Spectrum Disorders",
         },
         {
             img : path + "natureFour.jpg",
-            title : "OCD",
+            title : "Bi-Polar Disorders",
         },
         {
             img : path + "natureOne.jpg",
-            title : "Schizophrenia",
+            title : "PTSD and Trauma Recovery",
         },
         {
             img : path + "natureTwo.jpg",
-            title : "Trauma",
+            title : "Obsessive Compulsive Disorder",
         },
         {
             img : path + "natureThree.jpg",
-            title : "Anxiety",
+            title : "Social Anxiety",
         },
         {
             img : path + "natureFour.jpg",
-            title : "OCD",
+            title : "Adjustment Difficulties",
+        },
+        {
+            img : path + "natureTwo.jpg",
+            title : "Emotion Dysregulation",
+        },
+        {
+            img : path + "natureThree.jpg",
+            title : "Women’s Mental Health",
+        },
+        {
+            img : path + "natureFour.jpg",
+            title : "Life Transitions / Family Changes",
+        },
+        {
+            img : path + "natureTwo.jpg",
+            title : "Grief and Loss",
+        },
+        {
+            img : path + "natureThree.jpg",
+            title : "Chronic Illness",
+        },
+        {
+            img : path + "natureFour.jpg",
+            title : "Disordered eating",
+        },
+        {
+            img : path + "natureFour.jpg",
+            title : "Addiction",
         },
         
     ]
@@ -86,7 +116,7 @@ const CustomCarousel = () => {
         <>
             
             <div>
-            <div className="landing-title title color">
+            <div className={width ? "landing-title title color-2" : "landing-title title color"}>
                 Areas of Expertise
                 <div className="white-space"></div>
             </div>
