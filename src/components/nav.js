@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Nav = (props) => {
     const width = useWindowWidth(1000);
+    const widthTwo = useWindowWidth(500);
     const [nav, setNav] = useState(false);
     const [chevron, setChevron] = useState(false);
     const [chevronTwo, setChevronTwo] = useState(false);
@@ -20,7 +21,7 @@ const Nav = (props) => {
             { nav ? <NavPage updateIndex={props.updateIndex} updateNav={updateNav}/> : <></> }
             <div className="nav-container">
                 <div className="nav-container-2">
-                    <div className="dr" onClick={() => {
+                    <div className={widthTwo ? "dr-2" : "dr"} onClick={() => {
                             navigate("/");
                             updateNav(false);
                         }}>

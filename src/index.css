@@ -186,7 +186,7 @@ code {
     height: inherit;
 }
 
-.dr {
+.dr-2, .dr {
     font-size: 35px;
     font-family: 'Wittgenstein';
     cursor: pointer;
@@ -196,6 +196,10 @@ code {
     align-items: center;
     justify-self: center;
     text-wrap: nowrap;
+}
+
+.dr-2 {
+    font-size: 25px;
 }
 
 .pages-container {
@@ -596,11 +600,29 @@ code {
     text-align: left;
     font-size: large;
     line-height: 28px;
-    width: 600px;
+    width: 50%;
 }
 
 .header-text-2-2 {
     width: 300px;
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header);
+    border-bottom: none;
+    padding-bottom: 60px;
+}
+
+.white-space {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -20%;
+    right: 0%;
+    background-color: var(--header);
 }
 
 .container {
@@ -846,6 +868,12 @@ code {
     margin-top: 20px;
     font-family: Poppins;
     text-align: center;
+}
+
+.color {
+    position: relative;
+    background-color: var(--header);
+    padding-top: 20px;
 }
 
 ol {

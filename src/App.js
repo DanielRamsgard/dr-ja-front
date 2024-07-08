@@ -4,6 +4,7 @@ import Forms from "./components/forms";
 import MapLocations from "./components/mapLocations";
 import About from "./components/about";
 import Specialty from "./components/specialty";
+import CustomCarousel from "./components/customCarousel";
 import { useState } from "react";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Route path="locations" element={<MapLocations updateIndex={updateIndex}/>}/>
                     <Route path="about" element={<About updateIndex={updateIndex}/>}/>
                     <Route path="specialty" element={<Specialty index={index} updateIndex={updateIndex}/>}/>
+                    <Route path="test" element={<CustomCarousel />}/>
                 </Routes>
             </Router>
         </>
