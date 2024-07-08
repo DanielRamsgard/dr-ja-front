@@ -72,7 +72,7 @@ code {
 
 .info-new {
     width: 100%;
-    height: 240px;
+    height: 320px;
     position: absolute;
     bottom: 0%;
     background-color: var(--landing-color);
@@ -82,10 +82,15 @@ code {
     align-items: center;
 }
 
+.spacer-new {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
 .info-2 {
     display: flex;
     height: 100%;
-    width: 80%;
+    width: 85%;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
@@ -97,7 +102,7 @@ code {
     font-size: 50px;
     font-weight: 600;
     text-align: left;
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     font-family: Wittgenstein;
 }
@@ -129,11 +134,11 @@ code {
     align-items: center;
 }
 
-.landing-button, .landing-subtitle {
+.landing-button-new, .landing-button, .landing-subtitle {
     font-size: var(--size-two);
     font-weight: 400;
     text-align: left;
-    width: 90%;
+    width: 100%;
     line-height: 30px;
     font-family: Poppins;
 }
@@ -141,14 +146,14 @@ code {
 .landing-subtitle-new {
     margin-bottom: 30px;
     text-align: right;
-    font-size: var(--size-two);
+    font-size: 14px;
     font-weight: 400;
     width: 60%;
     line-height: 30px;
     font-family: Poppins;
 }
 
-.landing-button {
+.landing-button-new, .landing-button {
     border: none;
     border-radius: 10px 10px 10px 10px;
     background-color: var(--button-color);
@@ -157,14 +162,18 @@ code {
     align-items: center;
     justify-content: center;
     height: 70px;
-    width: 90%;
+    width: 100%;
     font-weight: 700;
     cursor: pointer;
     transition: .7s ease;
     box-shadow: 10px 10px 4px var(--box-shadow);
 }
 
-.landing-button:hover {
+.landing-button-new {
+    width: 90%;
+}
+
+.landing-button-new:hover, .landing-button:hover {
     transform: scale(1.02);
     box-shadow: 10px 10px 4px var(--box-shadow);
 }
@@ -407,7 +416,7 @@ code {
 }
 
 .specialties-container {
-    width: 1152px;
+    width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
@@ -429,6 +438,18 @@ code {
     flex-wrap: wrap;
     column-gap: 80px;
     row-gap: 60px;
+}
+
+.pad {
+    padding-bottom: 20px;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+
 }
 
 .expertise-2 {
@@ -570,11 +591,15 @@ code {
     row-gap: 30px;
 }
 
-.header-text-2 {
+.header-text-2-2, .header-text-2 {
     font-family: Poppins;
     text-align: left;
     font-size: large;
     line-height: 28px;
+    width: 600px;
+}
+
+.header-text-2-2 {
     width: 300px;
 }
 

@@ -19,7 +19,7 @@ const Split = () => {
                         <div className="landing-title-new-2">
                             Mental health, built around you.
                         </div>
-                        <div className="landing-button" onClick={() => {
+                        <div className="landing-button-new" onClick={() => {
                             navigate("/new-patient-forms");
                         }}>
                             Get Started
@@ -33,18 +33,18 @@ const Split = () => {
                     <img alt="Landing" src="/static/media/iphone.jpg" className="landing"></img>
                 </div>
                 <div className="info-new">
-                        <div className="title-container">
-                            <div className="landing-title-new">
-                                Mental health, <br /> built around you.
-                            </div>
-                            <div className="landing-subtitle-new">
-                                Dr. Aspenleiter is a Clinical Psychologist who works with Children, Adolescents and Adults. She specializes in Psychodynamic Psychotherapy but integrates an eclectic approach through Family Systems Theory and aspects of Cognitive Behavioral Therapy as well.</div>
+                    <div className="title-container">
+                        <div className="landing-title-new">
+                            Mental health, <br /> built around you.
                         </div>
-                        <div className="landing-button" onClick={() => {
-                            navigate("/new-patient-forms");
-                        }}>
-                            Get Started
-                        </div>
+                        <div className="landing-subtitle-new">
+                            Dr. Aspenleiter is a Clinical Psychologist who works with Children, Adolescents and Adults. She specializes in Psychodynamic Psychotherapy but integrates an eclectic approach through Family Systems Theory and aspects of Cognitive Behavioral Therapy.</div>
+                    </div>
+                    <div className="landing-button-new" onClick={() => {
+                        navigate("/new-patient-forms");
+                    }}>
+                        Get Started
+                    </div>
                 </div>
             </> 
             :
@@ -58,13 +58,13 @@ const Split = () => {
                             Mental health, <br /> built around you.
                         </div>
                         <div className="landing-subtitle">
-                            Dr. Aspenleiter is a Clinical Psychologist who works with Children, Adolescents and Adults. She specializes in Psychodynamic Psychotherapy but integrates an eclectic approach through Family Systems Theory and aspects of Cognitive Behavioral Therapy as well.</div>
+                            Dr. Aspenleiter is a Clinical Psychologist who works with Children, Adolescents and Adults. She specializes in Psychodynamic Psychotherapy but integrates an eclectic approach through Family Systems Theory and aspects of Cognitive Behavioral Therapy</div>
                         <div className="landing-button" onClick={() => {
                             navigate("/new-patient-forms");
                         }}>
                             Get Started
                         </div>
-                        <div className="spacer">
+                        <div className="spacer-new">
                         </div>
                     </div>
                 </div>

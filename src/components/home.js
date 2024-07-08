@@ -4,6 +4,8 @@ import Card from "./card";
 import Split from "./split";
 import Locations from "./locations";
 import Info from "./info";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
     const widthThree = useWindowWidth(485);
@@ -26,6 +28,25 @@ const Home = () => {
             title : "OCD",
         },
     ]
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 4
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 4
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 4
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 4
+        }
+      };
 
     return (
         <>
@@ -44,11 +65,13 @@ const Home = () => {
 
                     </div>
                     <div className={widthThree ? "expertise-2" : "expertise"}>
+                        
                         {
                             specialties.map((item) => {
                                 return <Card key={item.title} img={item.img} title={item.title} widthThree={widthThree}/>
                             })
                         }
+                       
                     </div>
                 </div>
             </div>
