@@ -50,7 +50,7 @@ const CustomCarousel = () => {
       const path = "/static/media/";
       const specialties = [
         {
-            img : path + "natureOne.jpg",
+            img : path + "imgOne.jpg",
             title : "Depressive Disorders",
         },
         {
@@ -58,23 +58,23 @@ const CustomCarousel = () => {
             title : "Generalized Anxiety Disorder",
         },
         {
-            img : path + "natureThree.jpg",
+            img : path + "womanTwo.jpg",
             title : "Schizophrenia Spectrum Disorders",
         },
         {
-            img : path + "natureFour.jpg",
+            img : path + "rock.jpg",
             title : "Bi-Polar Disorders",
         },
         {
-            img : path + "natureOne.jpg",
+            img : path + "imgTwo.jpg",
             title : "PTSD and Trauma Recovery",
         },
         {
-            img : path + "natureTwo.jpg",
+            img : path + "relax.jpg",
             title : "Obsessive Compulsive Disorder",
         },
         {
-            img : path + "natureThree.jpg",
+            img : path + "woman.jpg",
             title : "Social Anxiety",
         },
         {
@@ -82,33 +82,34 @@ const CustomCarousel = () => {
             title : "Adjustment Difficulties",
         },
         {
-            img : path + "natureTwo.jpg",
+            img : path + "manOne.jpg",
             title : "Emotion Dysregulation",
         },
         {
-            img : path + "natureThree.jpg",
+            img : path + "imgThree.jpg",
             title : "Women’s Mental Health",
         },
         {
-            img : path + "natureFour.jpg",
-            title : "Life Transitions / Family Changes",
+            img : path + "tranquility.jpeg",
+            title : "Addiction",
         },
         {
-            img : path + "natureTwo.jpg",
+            img : path + "womanThree.jpg",
             title : "Grief and Loss",
         },
         {
-            img : path + "natureThree.jpg",
+            img : path + "imgFour.jpg",
+            title : "Life Transitions / Family Changes",
+        },
+        {
+            img : path + "natureOne.jpg",
             title : "Chronic Illness",
         },
         {
-            img : path + "natureFour.jpg",
+            img : path + "serenity.jpeg",
             title : "Disordered eating",
         },
-        {
-            img : path + "natureFour.jpg",
-            title : "Addiction",
-        },
+        
         
     ]
 
