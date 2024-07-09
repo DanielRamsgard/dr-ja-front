@@ -87,7 +87,7 @@ const CustomCarousel = () => {
         },
         {
             img : path + "imgThree.jpg",
-            title : "Women’s Mental Health",
+            title : "Grief and Loss",
         },
         {
             img : path + "tranquility.jpeg",
@@ -95,7 +95,7 @@ const CustomCarousel = () => {
         },
         {
             img : path + "womanThree.jpg",
-            title : "Grief and Loss",
+            title : "Women’s Mental Health",
         },
         {
             img : path + "imgFour.jpg",

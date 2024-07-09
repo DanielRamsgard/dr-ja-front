@@ -178,7 +178,7 @@ const Form = () => {
                                 </div>
                 </div>
                 <div className="upon">
-                    Upon submission of a form, Dr. Aspenleiter will contact you about scheduling an appointment time. Information is saved between forms.
+                    Upon submission of the following forms, Dr. Aspenleiter will contact you about the possibility of scheduling an appointment time. Please submit forms individually.
                 </div>
             </div>
             <div className="pdf-container">

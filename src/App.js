@@ -20,7 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Land updateIndex={updateIndex}/>}/>
                     <Route path="new-patient-forms" element={<Forms updateIndex={updateIndex}/>}/>
-                    <Route path="locations" element={<MapLocations updateIndex={updateIndex}/>}/>
+                    <Route path="location" element={<MapLocations updateIndex={updateIndex}/>}/>
                     <Route path="about" element={<About updateIndex={updateIndex}/>}/>
                     <Route path="specialty" element={<Specialty index={index} updateIndex={updateIndex}/>}/>
                     <Route path="test" element={<CustomCarousel />}/>

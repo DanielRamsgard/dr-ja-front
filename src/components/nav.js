@@ -100,10 +100,10 @@ const Nav = (props) => {
                             </div>
                             
                             <div className="nav-text" onClick={() => {
-                                navigate("/locations");
+                                navigate("/location");
                                 updateNav(false);
                             }}>
-                                Locations
+                                Location
                             </div>
                             <div className="nav-text" onClick={() => {
                                 navigate("/about");
