@@ -10,7 +10,7 @@ const Info = () => {
         <>
             <div className="specialties">
                 <div className="specialties-container">
-                    <div className="landing-title title">
+                    <div className="landing-title title title-2">
                         Julie A. Aspenleiter, PysD
                     </div>
                     <div className="spacer-3"></div>
@@ -35,6 +35,9 @@ const Info = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="img-contain">
+                    <img alt="Info Background" src="/static/media/windy.jpg" className="img"></img>
                 </div>
             </div>
         </>
